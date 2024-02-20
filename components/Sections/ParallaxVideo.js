@@ -30,17 +30,20 @@ const ParallaxVideo = () => {
         }
     };
 
+    const handlePause = () => {
+        setIsPlaying(false);
+    };
+
     return (
         <>
-
+            <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback} >
+                <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" controls autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} onPause={handlePause} />
+            </div>
             
             <section id="parallax-video" className="parallax" ref={parallax}>
                 <div className="overlay" style={{backgroundColor: 'white'}}/>
                 <Container>
                     <Row>
-                    <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback} >
-                <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" controls autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} />
-            </div>
                         <div className="video-btn wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">               
                             <button onClick={openModal} className="play-btn">
                                 <i className="fas fa-play"></i>
