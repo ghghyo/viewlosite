@@ -6,7 +6,24 @@ const ParallaxVideo = () => {
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
 
+    useEffect(() => {
+        const handleFullScreenChange = () => {
+            if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
+                closeModal();
+            }
+        };
+        document.addEventListener('fullscreenchange', handleFullScreenChange);
+        document.addEventListener('webkitfullscreenchange', handleFullScreenChange);
+        document.addEventListener('mozfullscreenchange', handleFullScreenChange);
+        document.addEventListener('MSFullscreenChange', handleFullScreenChange);
 
+        return () => {
+            document.removeEventListener('fullscreenchange', handleFullScreenChange);
+            document.removeEventListener('webkitfullscreenchange', handleFullScreenChange);
+            document.removeEventListener('mozfullscreenchange', handleFullScreenChange);
+            document.removeEventListener('MSFullscreenChange', handleFullScreenChange);
+        };
+    }, []);
 
     const openModal = () => {
         setIsPlaying(true);
@@ -34,19 +51,19 @@ const ParallaxVideo = () => {
 
     return (
         <>
-            <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback} >
+            <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback}>
                 <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" controls autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} />
             </div>
-            
+
             <section id="parallax-video" className="parallax" ref={parallax}>
-                <div className="overlay" style={{backgroundColor: 'white'}}/>
+                <div className="overlay" style={{ backgroundColor: 'white' }} />
                 <Container>
                     <Row>
-                        <div className="video-btn wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">               
+                        <div className="video-btn wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
                             <button onClick={openModal} className="play-btn">
                                 <i className="fas fa-play"></i>
                             </button>
-                            <span className="video-text" style={{color: 'black'}}>What is ViewLo?</span>
+                            <span className="video-text" style={{ color: 'black' }}>What is ViewLo?</span>
                         </div>
                     </Row>
                 </Container>
