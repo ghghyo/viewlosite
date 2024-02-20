@@ -34,6 +34,7 @@ const ParallaxVideo = () => {
         if (videoRef.current) {
             videoRef.current.pause();
             videoRef.current.currentTime = 0;
+            videoRef.current.style.display = 'none'; // Hide the video element
         }
     };
 
@@ -45,6 +46,7 @@ const ParallaxVideo = () => {
             } else {
                 videoRef.current.pause();
                 setIsPlaying(false);
+                videoRef.current.style.display = 'none'; // Hide the video element
             }
         }
     };
