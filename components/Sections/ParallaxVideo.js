@@ -9,7 +9,11 @@ const ParallaxVideo = () => {
     useEffect(() => {
         const handleFullScreenChange = () => {
             if (!document.fullscreenElement && !document.webkitFullscreenElement && !document.mozFullScreenElement && !document.msFullscreenElement) {
-                closeModal();
+                setIsPlaying(false);
+                if (videoRef.current) {
+                    videoRef.current.pause();
+                    videoRef.current.currentTime = 0;
+                }
             }
         };
         document.addEventListener('fullscreenchange', handleFullScreenChange);
@@ -26,7 +30,18 @@ const ParallaxVideo = () => {
     }, []);
 
     const openModal = () => {
-        setIsPlaying(true);
+        if (videoRef.current) {
+            if (videoRef.current.requestFullscreen) {
+                videoRef.current.requestFullscreen();
+            } else if (videoRef.current.webkitRequestFullscreen) {
+                videoRef.current.webkitRequestFullscreen();
+            } else if (videoRef.current.mozRequestFullScreen) {
+                videoRef.current.mozRequestFullScreen();
+            } else if (videoRef.current.msRequestFullscreen) {
+                videoRef.current.msRequestFullscreen();
+            }
+            setIsPlaying(true);
+        }
     };
 
     const closeModal = () => {
@@ -34,7 +49,6 @@ const ParallaxVideo = () => {
         if (videoRef.current) {
             videoRef.current.pause();
             videoRef.current.currentTime = 0;
-            videoRef.current.style.display = 'none'; // Hide the video element
         }
     };
 
@@ -46,26 +60,25 @@ const ParallaxVideo = () => {
             } else {
                 videoRef.current.pause();
                 setIsPlaying(false);
-                videoRef.current.style.display = 'none'; // Hide the video element
             }
         }
     };
 
     return (
         <>
-            <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback}>
-                <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" controls autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} />
+            <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback} >
+                <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} />
             </div>
-
+            
             <section id="parallax-video" className="parallax" ref={parallax}>
-                <div className="overlay" style={{ backgroundColor: 'white' }} />
+                <div className="overlay" style={{backgroundColor: 'white'}}/>
                 <Container>
                     <Row>
-                        <div className="video-btn wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
+                        <div className="video-btn wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">               
                             <button onClick={openModal} className="play-btn">
                                 <i className="fas fa-play"></i>
                             </button>
-                            <span className="video-text" style={{ color: 'black' }}>What is ViewLo?</span>
+                            <span className="video-text" style={{color: 'black'}}>What is ViewLo?</span>
                         </div>
                     </Row>
                 </Container>
