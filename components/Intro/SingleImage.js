@@ -55,8 +55,8 @@ const SingleImage = () => {
                             {/* <!-- Image --> */}
                             <Col className="col-12 col-lg-6">
 							{isMobile ? (
-                <div className="banner-image">
-                    <video src="images/video_intro_viewlo.mp4" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} controls />
+                <div >
+                    <video src="images/video_intro_viewlo.mp4" alt="" style={{ width: '100%', height: '100%' }} controls />
                 </div>
             ) : (
                                 <div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'5px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
