@@ -49,7 +49,7 @@ export default class Footer extends Component {
 									<h6>Useful Links</h6>
 									
 									<ul className="footer-menu">
-										<li><a href="mailto:viewloinc@gmail.com">Support</a></li>
+										<li><a href="mailto:help@viewloapp.com">Support</a></li>
 										<li><a href="/privacyplan.html">Privacy Policy</a></li>
 										<li><a href="/terms.html">Terms &amp; Conditions</a></li>
 										{/* <li><a href="#">Affiliate Program</a></li>

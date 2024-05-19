@@ -1,12 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
 
 const ParallaxVideo = () => {
     const parallax = useRef(null);
     const videoRef = useRef(null);
     const [isPlaying, setIsPlaying] = useState(false);
-
-
 
     const openModal = () => {
         setIsPlaying(true);
@@ -32,10 +30,14 @@ const ParallaxVideo = () => {
         }
     };
 
+    const handlePause = () => {
+        setIsPlaying(false);
+    };
+
     return (
         <>
             <div className={`modal ${isPlaying ? 'open' : ''}`} onClick={togglePlayback} >
-                <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" controls autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} />
+                <video ref={videoRef} src="/images/parallax/video_how_to_viewlo.mp4" controls autoPlay={isPlaying} onClick={(e) => e.stopPropagation()} onPause={handlePause} />
             </div>
             
             <section id="parallax-video" className="parallax" ref={parallax}>
