@@ -38,7 +38,7 @@ const SingleImage = () => {
 									<i className="fab fa-google-play"></i><p>Available on<span>Google Play</span></p>
 								</a>
 								
-								<a href="#" className="custom-btn d-inline-flex align-items-center m-2 m-sm-0">
+								<a href="https://apps.apple.com/us/app/viewlo/id6473455611" className="custom-btn d-inline-flex align-items-center m-2 m-sm-0">
 									<i className="fab fa-apple"></i><p>Download on<span>App Store</span></p>
 								</a>
 							
