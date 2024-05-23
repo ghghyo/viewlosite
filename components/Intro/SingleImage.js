@@ -25,11 +25,11 @@ const SingleImage = () => {
 						<div className="banner-text">
 
 							<h1 className="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
-							View, Stream, Earn: <br />  Experience the World Live.
+							View <br />  Experience the World Live.
 							</h1>
 							
 							<p className="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
-							Welcome to Viewlo, the visionary mobile app that's reimagining connectivity. Experience the pulse of live news, dive into the heart of events, and stay connected to your culture or explore new ones, wherever you are, whenever you want. Download now and witness the revolution of live streaming.
+							
 							</p>
 
 							<div className="button-store wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.6s">
@@ -50,9 +50,12 @@ const SingleImage = () => {
 					
 					{/* <!-- Image --> */}
 					<Col className="col-12 col-lg-6">
-					<div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'5px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
-    					<video className="bounce-effect" src="images/video_intro_viewlo.mp4" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} id="myVideo" controls poster="images/videopreview.png"/>
-					</div>
+					{/*<div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'5px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
+    					 <video className="bounce-effect" src="images/video_intro_viewlo.mp4" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} id="myVideo" controls poster="images/videopreview.png"/> 
+					</div> */}
+					<div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'20px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
+    <img src="images/videopreview.png" alt="Banner Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+</div>
 					</Col>
 
 					
