@@ -25,11 +25,11 @@ const SingleImage = () => {
 						<div className="banner-text">
 
 							<h1 className="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
-							View <br />  Experience the World Live.
+							Viewlo: News Reporting and <br />Management Reimagined.
 							</h1>
 							
 							<p className="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
-							
+							Viewlo offers SaaS solutions aimed at enhancing the operational efficiency of news organizations worldwide. Our suite of tools supports crucial functions such as tracking field reporters, facilitating communication, scheduling, and securing multimedia data storage. Our tools also streamlines the onboarding of reporters by handling vetting, employment eligibility verification, and automating payments, ensuring timely compensation for freelance contributors. This allows news outlets to concentrate on producing quality journalism while Viewlo manages operational and financial logistics.
 							</p>
 
 							<div className="button-store wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.6s">
