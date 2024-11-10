@@ -32,13 +32,13 @@ export default class Footer extends Component {
 										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis non, fugit totam vel laboriosam vitae.
 									</p>
 									*/}
-									{/* <!-- Social links --> 
+									{/* <!-- Social links --> */}
 									<div className="footer-social">
 										<a href="HTTPS://twitter.com/viewloapp" title="Twitter"><i className="fab fa-twitter fa-fw"></i></a>
 										<a href="https://www.facebook.com/share/J23XeHxdjuPfUrN3/?mibextid=eQY6cl" title="Facebook"><i className="fab fa-facebook-f fa-fw"></i></a>
 										<a href="https://www.instagram.com/viewloapp?igsh=MTNvaGp4eTNzNndpOA%3D%3D&utm_source=qr" title="Instagram"><i className="fab fa-instagram"></i></a>
 										<a href="https://www.tiktok.com/@viewloapp?_t=8jzlWw3X5Rb&_r=1" title="Tiktok"><i className="fab fa-tiktok"></i></a>
-									</div>*/}
+									</div>
 								</div>
 							</Col>
 							
