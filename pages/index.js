@@ -31,17 +31,17 @@ const Index = () => (
 
         {/* <Clients className="section-box bg-grey" /> */}
         {/* <Features /> */}
-        {/* <ParallaxVideo /> */}
-        {/*<Services serviceClassName="service-single" /> */}
+         <ParallaxVideo /> 
+        <Services serviceClassName="service-single" /> 
         {/* <Overview /> */}
         {/* <Testimonials /> */}
         {/* <Counters /> */}
         {/* <Team /> */}
         {/* <Screenshots className="bg-grey" /> */}
-        {/*<Support />*/}
+        <Support />
         {/* <Subscribe /> */}
         {/* <Blog /> */}
-        {/*<Pricing className="bg-grey" />*/}
+        <Pricing className="bg-grey" />
         {/* <Contact /> */}
         <Footer />
         <ToTop />
