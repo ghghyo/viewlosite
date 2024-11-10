@@ -5,14 +5,14 @@ import BackgroundSlider from 'react-background-slider';
 const SingleImage = () => {
     return (
         <section id="home" className="banner image-bg">
-			{/*
+			
             <BackgroundSlider
                 duration={100000}
                 transition={0.75}
                 className="image-bg"
                 images={['/images/banner/single-image.jpg']}
             />
-			*/}
+			
 			{/* <!-- Container --> */}
 			<Container>
 				
@@ -25,11 +25,11 @@ const SingleImage = () => {
 						<div className="banner-text">
 
 							<h1 className="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0s">
-							Viewlo: News Reporting and <br />Management Reimagined.
+							View, Stream, Earn: <br /> Your Real-Time Portal to the World
 							</h1>
 							
 							<p className="wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s">
-							Viewlo offers SaaS solutions aimed at enhancing the operational efficiency of news organizations worldwide. Our suite of tools supports crucial functions such as tracking field reporters, facilitating communication, scheduling, and securing multimedia data storage. Our tools also streamlines the onboarding of reporters by handling vetting, employment eligibility verification, and automating payments, ensuring timely compensation for freelance contributors. This allows news outlets to concentrate on producing quality journalism while Viewlo manages operational and financial logistics.
+							Viewlo brings immersive, real-time experiences from places beyond reach. Experience the pulse of live news, take virtual college campus tours, dive into the heart of events, and stay connected to your culture or explore new ones, wherever you are, whenever you want.
 							</p>
 
 							<div className="button-store wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.6s">
@@ -50,12 +50,12 @@ const SingleImage = () => {
 					
 					{/* <!-- Image --> */}
 					<Col className="col-12 col-lg-6">
-					{/*<div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'5px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
+					<div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'5px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
     					 <video className="bounce-effect" src="images/video_intro_viewlo.mp4" alt="" style={{ width: '100%', height: '100%', objectFit: 'cover' }} id="myVideo" controls poster="images/videopreview.png"/> 
-					</div> */}
-					<div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'20px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
+					</div> 
+{/* <div className="banner-image wow fadeInUp" data-wow-offset="10" data-wow-duration="1s" data-wow-delay="0.3s" style={{ marginTop:'20px', position: 'relative', maxWidth: '455px', maxHeight: '550px', width: '100%', height: '50%', borderRadius: '40px', overflow: 'hidden' }}>
     <img src="images/videopreview.png" alt="Banner Image" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-</div>
+</div> */}
 					</Col>
 
 					
