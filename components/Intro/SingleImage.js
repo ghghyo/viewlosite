@@ -5,13 +5,13 @@ import BackgroundSlider from 'react-background-slider';
 const SingleImage = () => {
     return (
         <section id="home" className="banner image-bg">
-			
+	    {/*		
             <BackgroundSlider
                 duration={100000}
                 transition={0.75}
                 className="image-bg"
                 images={['/images/banner/single-image.jpg']}
-            />
+            /> */}
 			
 			{/* <!-- Container --> */}
 			<Container>
